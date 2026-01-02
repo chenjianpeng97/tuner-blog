@@ -5,7 +5,8 @@ keywords: null
 author: John Doe
 language: en
 timezone: ''
-url: http://example.com
+url: https://chenjianpeng97.github.io/tuner-blog/
+root: /tuner-blog/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
