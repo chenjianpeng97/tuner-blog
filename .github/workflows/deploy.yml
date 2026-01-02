@@ -20,11 +20,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Pin strip-ansi to v6 (fix ESM error)
-        run: npm install strip-ansi@^6 --save
+      - name: Force strip-ansi v6 and Install Dependencies
+        run: |
+          npm pkg set overrides.strip-ansi="^6.0.1"
+          npm install
 
       - name: Install Hexo Git Deployer
         run: |
@@ -49,5 +48,5 @@ jobs:
           git init
           git add -A
           git commit -m "Create by workflows"
-          git remote add origin https://${{ secrets.GH_TOKEN }}@github.com/chenjianpeng97/tuenr-blogs.git
+          git remote add origin https://${{ secrets.GH_TOKEN }}@github.com/chenjianpeng97/tuner-blogs.git
           git push origin HEAD:gh-pages -f
