@@ -61,5 +61,5 @@ ignore: null
 theme: icarus
 deploy:
   type: git
-  repo: https://github.com/chenjianpeng97/tuenr-blogs.git
+  repo: https://github.com/chenjianpeng97/tuner-blog.git
   branch: gh-pages
